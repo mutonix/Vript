@@ -36,7 +36,7 @@ You can download the [Vript dataset](https://huggingface.co/datasets/Mutonix/Vri
 **By downloading these datasets, you agree to the terms of the [License](#License).**
 
 The captions of the videos in the Vript dataset are structured as follows:
-```json
+```
 {
     "meta": {
         "video_id": "339dXVNQXac",
