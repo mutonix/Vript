@@ -82,7 +82,6 @@ Vript/
 
 - `vript_long_videos/` (667 GB) and `vript_short_videos/` (8.8 GB): The untrimmed videos in the Vript dataset. Long videos are from YouTube, and short videos are from YouTube Shorts and TikTok. We divide the whole data into multiple zip files, each containing 10 long videos / 50 short videos.
 
-    </br>
 
     All the videos are in **720p** resolution, and _we will provide the videos in the highest quality (up to 2K) available later_ (or you can download them from YouTube directly).
 
@@ -172,7 +171,6 @@ Vript-ERO/
 ```
 - `ERO-2/` and `ERO-4/`: The annotations of the Vript-ERO benchmark. The `ERO-2_annotations.jsonl` and `ERO-4_annotations.jsonl` files contain all the annotations in the Vript-ERO benchmark, which can be previewed in the [Vript-ERO](https://huggingface.co/datasets/Mutonix/Vript-ERO) on Huggingface.
 
-    </br>
 
     **ERO-2**: There are two scenes in each video, and the model needs to predict the correct temporal order of the scenes. And the ERO-2 videos are trimmed to be shorter than original videos. (It means the input lengths are shorter)
 
