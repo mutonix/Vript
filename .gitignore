@@ -1,0 +1,6 @@
+*.pptx
+*.pdf
+.vscode
+__pycache__
+.DS_Store
+*.ipynb
