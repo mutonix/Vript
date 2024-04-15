@@ -52,13 +52,13 @@ Vript/
 - `vript_meta/`: The meta information of the videos in the Vript dataset, including the video id, title, url, description, category, etc.
 
 - `vript_captions/`: The video captions of the videos in the Vript dataset. The structure of the caption file is as follows:
-```json
+```
 {
     "meta": {
         "video_id": "339dXVNQXac",
         "video_title": "...",
         "num_clips": ...,
-        "integrity": true,   # whether all clips are captioned
+        "integrity": true,
     },
     "data": {
             "339dXVNQXac-Scene-001": {
