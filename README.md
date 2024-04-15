@@ -4,13 +4,13 @@
 ## Introduction
 We construct a **fine-grained** video-text dataset with 12K annotated high-resolution videos **(~400k clips)**. The annotation of this dataset is inspired by the video script. If we want to make a video, we have to first write a script to organize how to shoot the scenes in the videos. To shoot a scene, we need to decide the content, shot type (medium shot, close-up, etc), and how the camera moves (panning, tilting, etc). Therefore, we extend video captioning to video scripting by annotating the videos in the format of video scripts. Different from the previous video-text dataset, we densely annotate the entire video without discarding any scenes and each scene has a caption with **~145** words. Besides the vision modality, we transcribe the voice-over into text and put it along with the video title to give more background information for annotating the video.
 
-In addition, we propose **Vript-Bench**, a new benchmark consisting of three challenging video understanding tasks **(are carefully double-checked by humans)**: 
+In addition, we propose **Vript-Bench**, a new benchmark consisting of three challenging video understanding tasks **(which are carefully double-checked by humans)**: 
 
 1) **Vript-CAP (Caption)**: A benchmark with detailed captions rather than short captions. 
 
-2) **Vript-RR (Retrieve then Reason)**: A video reasoning benchmark by first giving a detailed description of the scene and then asking questions about details in the scene. 
+2) **Vript-RR (Retrieve then Reason)**: A video reasoning benchmark by first giving a detailed description of the scene as a hint and then asking questions about details in the scene. 
 
-3) **Vript-ERO (Event Re-ordering)**: A benchmark tests the temporal understanding by offering the descriptions of scenes located in different four timelines of the same videos, and ask the model to give the right temporal order of the scenes.
+3) **Vript-ERO (Event Re-ordering)**: A benchmark that tests the temporal understanding by offering the descriptions of scenes located in four different timelines of the same video, and asks the model to give the right temporal order of the scenes.
 
 $\quad$
 
