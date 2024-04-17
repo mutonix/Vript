@@ -8,9 +8,9 @@ There are some takeaways from the Vript dataset:
 
 1) **Fine-grained**: The Vript dataset is annotated with detailed captions of ~145 words for each scene, which contain the shot type, camera movement, content, and scene title.
 
-2) **Dense Annotation**: The Vript dataset is densely annotated with detailed captions for all scenes in the entire videos.
+2) **Dense Annotation**: The Vript dataset is densely annotated with detailed captions for all scenes in the entire videos. Each video has ~40 scenes and lasts for ~6m on average (max 3h, min 5s). The total duration of the videos is ~1.3Kh.
 
-3) **High-quality**: The Vript dataset is annotated by GPT-4V/Claude 3 Sonnet. We find that GPT-4V has the best performance in generating detailed captions for videos and Claude 3 has a looser constraint on the video content so that it can caption some scenes that GPT-4V cannot.
+3) **High-quality**: The Vript dataset is annotated by GPT-4V/Claude 3 Sonnet. We find that GPT-4V has the best performance in generating detailed captions for videos and Claude 3 Sonnet has a looser constraint on the video content so that it can caption some scenes that GPT-4V cannot.
 
 4) **High-resolution & Diverse Aspect Ratios & Open Domain**: The Vript dataset contains both long videos from YouTube and short videos from YouTube Shorts and TikTok. The raw videos vary in 720p to 2K resolution.
 
@@ -22,6 +22,8 @@ In addition, we propose **Vript-Bench**, a new benchmark consisting of three cha
 2) **Vript-RR (Retrieve then Reason)**: A video reasoning benchmark by first giving a detailed description of the scene as a hint and then asking questions about details in the scene. 
 
 3) **Vript-ERO (Event Re-ordering)**: A benchmark that tests the temporal understanding by offering the descriptions of scenes located in two/four different timelines of the same video, and asks the model to give the right temporal order of the scenes.
+
+|
 
 $\quad$
 
