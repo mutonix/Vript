@@ -38,7 +38,7 @@ $\quad$
 </p>
 
 ## Updates
-- 🔥 **2024-04-15**: We release the **Vript** dataset and **Vript-Bench** benchmark. Both videos and annotations are available on [🤗](https://huggingface.co/collections/Mutonix/vript-datasets-661a80dc080a813b6ea95b50). We offer both untrimmed videos and video clips in 720p (higher resolutions may be available later).
+- 🔥 **2024-04-15**: We release the **Vript** dataset and **Vript-Bench** benchmark. Both videos and annotations are **directly** available on [🤗](https://huggingface.co/collections/Mutonix/vript-datasets-661a80dc080a813b6ea95b50). We offer both untrimmed videos and video clips in 720p (higher resolutions may be available later).
 
 - [WIP] We are working on the Vriptor, a better and lightweight model for video captioning based on Vript dataset, which will be released soon.
 
