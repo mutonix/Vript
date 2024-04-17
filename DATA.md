@@ -102,17 +102,13 @@ Vript-CAP/
 ├── CAP_scenes/
 │   ├── -_MRAAhEKio-Scene-010.mp4
 │   └── ...
-│
-├── CAP_annotations/
-│    ├── -_MRAAhEKio-Scene-010_CAP.json
-│    └── ...
 │  
 └── CAP_annotations.jsonl
 ```
 
 - `CAP_scenes.zip`: The trimmed video clips in the Vript-CAP benchmark.
 
-- `CAP_annotations.zip`: The annotations of the Vript-CAP benchmark. The structure of the annotation file is similar to the `vript_captions` in the Vript dataset. The `CAP_annotations.jsonl` file contains all the annotations in the Vript-CAP benchmark.
+- `CAP_annotations.jsonl`: The annotations of the Vript-CAP benchmark. The structure of the annotation file is similar to the `vript_captions` in the Vript dataset. 
 
 #### Vript-RR
 
@@ -131,10 +127,6 @@ Vript-RR/
 ├── RR_scenes.zip
 │   ├── -_MRAAhEKio-Scene-010.mp4
 │   └── ...
-│ 
-├── RR_annotations
-│   ├── -_MRAAhEKio-Scene-010_RR.json
-│   └── ...
 │
 └── RR_annotations.jsonl
 ```
@@ -142,7 +134,7 @@ Vript-RR/
 
 - `RR_scenes.zip`: The trimmed video clips in the Vript-RR benchmark, which correspond to scenes in the `RR_annotations`.
 
-- `RR_annotations`: The annotations of the Vript-RR benchmark. The `RR_annotations.jsonl` file contains all the annotations in the Vript-RR benchmark, which can be previewed in the [Vript-RR](https://huggingface.co/datasets/Mutonix/Vript-RR) on Huggingface.
+- The `RR_annotations.jsonl`: It contains all the annotations in the Vript-RR benchmark, which can be previewed in the [Vript-RR](https://huggingface.co/datasets/Mutonix/Vript-RR) on Huggingface.
 
 #### Vript-ERO
 ``` 
@@ -160,14 +152,9 @@ Vript-ERO/
 │   ├── ERO-2_videos.zip
 │   │   ├── -_MRAAhEKio.mp4
 │   │   └── ...
-│   └── ERO-2_annotations.zip
-│       ├── -_MRAAhEKio-Scene-010_ERO-2.json
-│       └── ...
 │   
 └── ERO-4/
     ├── ERO-4_videos.zip
-    │   └── ...
-    └── ERO-4_annotations.zip
         └── ...
 ```
 - `ERO-2/` and `ERO-4/`: The annotations of the Vript-ERO benchmark. The `ERO-2_annotations.jsonl` and `ERO-4_annotations.jsonl` files contain all the annotations in the Vript-ERO benchmark, which can be previewed in the [Vript-ERO](https://huggingface.co/datasets/Mutonix/Vript-ERO) on Huggingface.

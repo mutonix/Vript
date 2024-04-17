@@ -23,8 +23,6 @@ In addition, we propose **Vript-Bench**, a new benchmark consisting of three cha
 
 3) **Vript-ERO (Event Re-ordering)**: A benchmark that tests the temporal understanding by offering the descriptions of scenes located in two/four different timelines of the same video, and asks the model to give the right temporal order of the scenes.
 
-|
-
 $\quad$
 
 <p align="center">
