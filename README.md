@@ -85,6 +85,76 @@ The captions of the videos in the Vript dataset are structured as follows:
 
 More details about the dataset and benchmark can be found in the [DATA.md](DATA.md).
 
+## Annotation Details
+### Prompt
+```python
+title = video_info["title"]
+if title:
+    title_instruction = f'from a video titled "{title}" '
+else:
+    title_instruction = ""
+
+for scene in scene_dir:
+    content = []
+    voiceover_instruction = ""
+    if scene in voiceovers_dict and 'short' not in args.video_dir:
+        voiceover = voiceovers_dict[scene]
+        if voiceover['full_text'].strip():
+            voiceover_text = voiceover['full_text'].strip() 
+            content.append({"type": "text", "text": f"Voice-over: {voiceover_text}\nVideo frames:"})
+            voiceover_instruction = "voice-over and "
+        else:
+            voiceover_text = ""
+    else:
+        voiceover_text = ""
+
+    scene_imgs = os.listdir(os.path.join(args.video_dir, vdir, scene))
+    scene_imgs = [i for i in scene_imgs if i.endswith(".jpg")]
+    scene_imgs = sorted(scene_imgs, key=lambda x: int(x.split('.')[0].split('_')[-1]))
+    encoded_scene_imgs = []
+    for scene_img in scene_imgs:
+        encoded_scene_img = encode_image(os.path.join(args.video_dir, vdir, scene, scene_img))
+        encoded_scene_imgs.append(encoded_scene_img)
+        content.append({"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{encoded_scene_img}", "detail": "low"}})
+
+            content.append({"type": "text", "text": f"""
+Based on the {voiceover_instruction}successive frames {title_instruction}above, please describe:
+1) the shot type (15 words)
+2) the camera movement (15 words)
+3) what is happening as detailed as possible (e.g. plots, characters' actions, environment, light, all objects, what they look like, colors, etc.) (150 words)   
+4) Summarize the content to title the scene (10 words)
+Directly return in the json format like this:
+{{"shot_type": "...", "camera_movement": "...", "content": "...", "scene_title": "..."}}. Do not describe the frames individually but the whole clip.
+"""})
+            
+    messages=[
+        {
+            "role": "system",
+            "content": "You are an excellent video director that can help me analyze the given video clip."
+        },
+        {
+            "role": "user",
+            "content": content
+        }
+    ]
+```
+
+### Sampling Strategy
+```python
+duration_time = total_frames / fps
+
+# if duration < 6s
+if duration_time < 6:
+    # extract 20% 50% 80% frame
+# if duration < 30s
+elif duration_time < 30:
+    # extract 15% 40% 60% 85% frame
+else:
+    # extract 15% 30% 50% 70% 85% frame
+```
+
+Thanks to [PySceneDetect](https://github.com/Breakthrough/PySceneDetect) for the frame extraction.
+
 ## License
 By downloading or using the data or model, you understand, acknowledge, and agree to all the terms in the following agreement.
 
