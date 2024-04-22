@@ -153,7 +153,7 @@ else:
     # extract 15% 30% 50% 70% 85% frame
 ```
 
-Thanks to [PySceneDetect](https://github.com/Breakthrough/PySceneDetect) for the frame extraction.
+Thanks to [PySceneDetect](https://github.com/Breakthrough/PySceneDetect) for dividing the video into scenes.
 
 ## License
 By downloading or using the data or model, you understand, acknowledge, and agree to all the terms in the following agreement.
