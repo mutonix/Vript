@@ -92,7 +92,7 @@ More details about the dataset and benchmark can be found in the [DATA.md](DATA.
 <img src="assets/Vript-RR_01.png" width="800">
 </p>
 
-
+### Input of Vript-RR
 There are two ways to evaluate on the Vript-RR benchmark:
 
 1. `Vript-RR-full` Task: 
@@ -106,6 +106,11 @@ We input the whole video and the hint to the model and ask the question. The mod
 Input: `clip` + `hint` + `question`
 ```
 We input the related scene instead of the whole video and the hint to the model and ask the question. The model can answer the question based on the related scene, which is more easy.
+
+#### Output of Vript-RR
+There are also two ways to evaluate the output of the Vript-RR benchmark:
+1. Multiple Choices.
+2. Open-ended. (The evaluation of open-ended questions based on GPT-4 evaluation is still in progress.)
 
 #### Categories in Vript-RR
 <p align="center">
