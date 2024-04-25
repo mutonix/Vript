@@ -85,6 +85,34 @@ The captions of the videos in the Vript dataset are structured as follows:
 
 More details about the dataset and benchmark can be found in the [DATA.md](DATA.md).
 
+## How to use Vript-Bench
+
+### Vript-RR (Retrieve then Reason)
+<p align="center">
+<img src="assets/Vript-RR_01.png" width="800">
+</p>
+
+
+There are two ways to evaluate on the Vript-RR benchmark:
+
+1. `Vript-RR-full` Task: 
+```
+Input: `full video` + `hint` + `question`
+```
+We input the whole video and the hint to the model and ask the question. The model can first locate the scene using the hint and then answer the question, which is more challenging.
+
+2. `Vript-RR-clip` Task:
+```
+Input: `clip` + `hint` + `question`
+```
+We input the related scene instead of the whole video and the hint to the model and ask the question. The model can answer the question based on the related scene, which is more easy.
+
+#### Categories in Vript-RR
+<p align="center">
+<img src="assets/Vript-RR_00.png" width="800">
+</p>
+
+
 ## Annotation Details
 ### Prompt
 ```python
