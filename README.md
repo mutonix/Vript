@@ -92,7 +92,7 @@ More details about the dataset and benchmark can be found in the [DATA.md](DATA.
 <img src="assets/Vript-RR_01.png" width="800">
 </p>
 
-### Input of Vript-RR
+#### Input of Vript-RR
 There are two ways to evaluate on the Vript-RR benchmark:
 
 1. `Vript-RR-full` Task: 
@@ -114,7 +114,7 @@ There are also two ways to evaluate the output of the Vript-RR benchmark:
 
 #### Categories in Vript-RR
 <p align="center">
-<img src="assets/Vript-RR_00.png" width="800">
+<img src="assets/Vript-RR_00.png" width="500">
 </p>
 
 
