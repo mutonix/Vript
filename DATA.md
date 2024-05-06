@@ -120,11 +120,11 @@ Vript-CAP/
 ```
 Vript-RR/
 |
-├── RR_videos.zip
+├── RR_videos/
 │   ├── -_MRAAhEKio.mp4
 │   └── ...
 │
-├── RR_scenes.zip
+├── RR_scenes/
 │   ├── -_MRAAhEKio-Scene-010.mp4
 │   └── ...
 │
@@ -140,28 +140,17 @@ Vript-RR/
 ``` 
 Vript-ERO/
 |
-├── ERO-2_annotations.jsonl
+├── ERO_annotations.jsonl
 |
-├── ERO-4_annotations.jsonl
-|
-├── ERO_scenes.zip
+├── ERO_scenes/
 │   ├── -_MRAAhEKio-Scene-010.mp4
 │   └── ...
 │
-├── ERO-2/
-│   ├── ERO-2_videos.zip
-│   │   ├── -_MRAAhEKio.mp4
-│   │   └── ...
-│   
-└── ERO-4/
-    ├── ERO-4_videos.zip
-        └── ...
+└── ERO_videos/
+    ├── -_MRAAhEKio-Scene-010.mp4
+    └── ...
+
 ```
-- `ERO-2/` and `ERO-4/`: The annotations of the Vript-ERO benchmark. The `ERO-2_annotations.jsonl` and `ERO-4_annotations.jsonl` files contain all the annotations in the Vript-ERO benchmark, which can be previewed in the [Vript-ERO](https://huggingface.co/datasets/Mutonix/Vript-ERO) on Huggingface.
+- `ERO/`: The annotations of the Vript-ERO benchmark. The `ERO_annotations.jsonl` files contains all the annotations in the Vript-ERO benchmark, which can be previewed in the [Vript-ERO](https://huggingface.co/datasets/Mutonix/Vript-ERO) on Huggingface.
 
-
-    **ERO-2**: There are two scenes in each video, and the model needs to predict the correct temporal order of the scenes. And the ERO-2 videos are trimmed to be shorter than original videos. (It means the input lengths are shorter)
-
-    **ERO-4**: There are four scenes in each video, and the model needs to predict the correct temporal order of the scenes. And the ERO-4 videos are untrimmed. (It means the input length are much longer)
-
-- `ERO_scenes.zip`: The trimmed video clips in the Vript-ERO benchmark, which correspond to scenes in the `ERO-2` and `ERO-4` annotations.
+- `ERO_scenes`: The trimmed video clips in the Vript-ERO benchmark, which correspond to scenes in the `ERO` annotations.
