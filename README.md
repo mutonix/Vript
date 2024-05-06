@@ -45,7 +45,7 @@ $\quad$
 - [WIP] We are evaluating various models on the Vript HardBench benchmark and will release the leaderboard soon.
 
 ## Getting Started
-You can download the [Vript dataset](https://huggingface.co/datasets/Mutonix/Vript/) and Vript HardBench validation set ([HardCAP](https://huggingface.co/datasets/Mutonix/Vript-CAP/), [HardRR](https://huggingface.co/datasets/Mutonix/Vript-RR/), [HardERO](https://huggingface.co/datasets/Mutonix/Vript-ERO/)) on the Huggingface.
+You can download the [Vript dataset](https://huggingface.co/datasets/Mutonix/Vript/) and Vript HardBench validation set ([Vript-CAP](https://huggingface.co/datasets/Mutonix/Vript-CAP/), [Vript-RR](https://huggingface.co/datasets/Mutonix/Vript-RR/), [Vript-ERO](https://huggingface.co/datasets/Mutonix/Vript-ERO/)) on the Huggingface.
 **By downloading these datasets, you agree to the terms of the [License](#License).**
 
 The captions of the videos in the Vript dataset are structured as follows:
