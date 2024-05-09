@@ -1,5 +1,20 @@
+<p align="center">
+<img width="500px" alt="Vript" src="assets/Vript-title.png">
+</p>
+
+
 # 🎬 Vript: Refine Video Captioning into Video Scripting
 ---
+
+## Updates
+- 🔥 **2024-05-09**: We release **Vriptor-stllm**, a superior video captioning model trained upon [Vript](https://huggingface.co/datasets/Mutonix/Vript/) dataset based on [ST-LLM](https://github.com/TencentARC/ST-LLM/) model. **You can now try this model on the [🤗 Space](https://huggingface.co/spaces/Mutonix/Vriptor-stllm).** We will soon release the model weight.
+
+
+- **2024-05-06**: We re-annotate the Vript-CAP for a more detaild captioning benchmark. In Vript-CAP, we describe the scene twice as detailed as possible with ~250 words, which is **20x** longer than the existing video captioning benchmarks. e.g., MSVD, MSR-VTT. 
+
+- 🔥 **2024-04-15**: We release the **Vript** dataset and **Vript HardBench** benchmark. Both videos and annotations are **directly** available on [🤗](https://huggingface.co/collections/Mutonix/vript-datasets-661a80dc080a813b6ea95b50). We offer both untrimmed videos and video clips in 720p (higher resolutions may be available later).
+
+- [WIP] We are evaluating various models on the Vript HardBench benchmark and will release the leaderboard soon.
 
 ## Introduction
 We construct a **fine-grained** video-text dataset with 12K annotated YouTube videos **(~400k clips)**. The annotation of this dataset is inspired by the video script. If we want to make a video, we have to first write a script to organize how to shoot the scenes in the videos. To shoot a scene, we need to decide the content, shot type (medium shot, close-up, etc), and how the camera moves (panning, tilting, etc). Therefore, we extend video captioning to video scripting by annotating the videos in the format of video scripts. Different from the previous video-text datasets, we densely annotate the entire videos without discarding any scenes and each scene has a caption with **~145** words. Besides the vision modality, we transcribe the voice-over into text and put it along with the video title to give more background information for annotating the videos.
@@ -35,14 +50,7 @@ $\quad$
 <img src="assets/Vript-bench_00.png" width="800">
 </p>
 
-## Updates
-- 🔥 **2024-05-06**: We re-annotate the Vript-CAP for a more detaild captioning benchmark. In Vript-CAP, we describe the scene twice as detailed as possible with ~250 words, which is **20x** longer than the existing video captioning benchmarks. e.g., MSVD, MSR-VTT. 
 
-- 🔥 **2024-04-15**: We release the **Vript** dataset and **Vript HardBench** benchmark. Both videos and annotations are **directly** available on [🤗](https://huggingface.co/collections/Mutonix/vript-datasets-661a80dc080a813b6ea95b50). We offer both untrimmed videos and video clips in 720p (higher resolutions may be available later).
-
-- [WIP] We have finished training of Vriptor, a video captioning model on the Vript dataset with superior performance. The model will be released soon.
-
-- [WIP] We are evaluating various models on the Vript HardBench benchmark and will release the leaderboard soon.
 
 ## Getting Started
 You can download the [Vript dataset](https://huggingface.co/datasets/Mutonix/Vript/) and Vript HardBench validation set ([Vript-CAP](https://huggingface.co/datasets/Mutonix/Vript-CAP/), [Vript-RR](https://huggingface.co/datasets/Mutonix/Vript-RR/), [Vript-ERO](https://huggingface.co/datasets/Mutonix/Vript-ERO/)) on the Huggingface.
