@@ -16,6 +16,8 @@
 
 - [WIP] We are evaluating various models on the Vript HardBench benchmark and will release the leaderboard soon.
 
+- [WIP] We are working on the Vript-CN dataset, which is a Chinese version of the Vript dataset.
+
 ## Introduction
 We construct a **fine-grained** video-text dataset with 12K annotated YouTube videos **(~400k clips)**. The annotation of this dataset is inspired by the video script. If we want to make a video, we have to first write a script to organize how to shoot the scenes in the videos. To shoot a scene, we need to decide the content, shot type (medium shot, close-up, etc), and how the camera moves (panning, tilting, etc). Therefore, we extend video captioning to video scripting by annotating the videos in the format of video scripts. Different from the previous video-text datasets, we densely annotate the entire videos without discarding any scenes and each scene has a caption with **~145** words. Besides the vision modality, we transcribe the voice-over into text and put it along with the video title to give more background information for annotating the videos.
 
