@@ -41,7 +41,7 @@ In addition, we propose **Vript HardBench**, a new benchmark consisting of three
 $\quad$
 
 <p align="center">
-<img src="assets/Vript-overview_00.png" width="800">  
+<img src="assets/vript_paper_overview_00.png" width="800">  
 </p>
 
 $\quad$
