@@ -3,7 +3,7 @@
 </p>
 
 
-# 🎬 Vript: Refine Video Captioning into Video Scripting
+# 🎬 Vript: A Video Is Worth Thousands of Words
 ---
 
 ## Updates
