@@ -17,10 +17,10 @@
 
 - [WIP] We are evaluating various models on the Vript-Hard benchmark and will release the leaderboard soon.
 
-- [WIP] We are working on the Vript-CN dataset, which is a Chinese version of the Vript dataset.
+- [WIP] We are working on the Vript-CN dataset, which is a Chinese version of the Vript dataset. 
 
 ## Introduction
-We construct a **fine-grained** video-text dataset with 12K annotated YouTube videos **(~400k clips)**. The annotation of this dataset is inspired by the video script. If we want to make a video, we have to first write a script to organize how to shoot the scenes in the videos. To shoot a scene, we need to decide the content, shot type (medium shot, close-up, etc), and how the camera moves (panning, tilting, etc). Therefore, we extend video captioning to video scripting by annotating the videos in the format of video scripts. Different from the previous video-text datasets, we densely annotate the entire videos without discarding any scenes and each scene has a caption with **~145** words. Besides the vision modality, we transcribe the voice-over into text and put it along with the video title to give more background information for annotating the videos.
+Advancements in multimodal learning, particularly in video understanding and generation, require high-quality video-text datasets for improved model performance. Vript addresses this issue with a meticulously annotated corpus of 12K high-resolution videos, offering detailed, dense, and script-like captions for over 420K clips. Each clip has a caption of ~145 words, which is over 10x longer than most video-text datasets. Unlike captions only documenting static content in previous datasets, we enhance video captioning to video scripting by documenting not just the content, but also the camera operations, which include the shot types (medium shot, close-up, etc) and camera movements (panning, tilting, etc). By utilizing the Vript, we explore three training paradigms of aligning more text with the video modality rather than clip-caption pairs. This results in Vriptor, a top-performing video captioning model among open-source models, comparable to GPT-4V in performance. Vriptor is also a powerful model capable of end-to-end generation of dense and detailed captions for long videos. Moreover, we introduce Vript-Hard, a benchmark consisting of three video understanding tasks that are more challenging than existing benchmarks: Vript-HAL is the first benchmark evaluating action and object hallucinations in video LLMs, Vript-RR combines reasoning with retrieval resolving question ambiguity in long-video QAs, and Vript-ERO is a new task to evaluate the temporal understanding of events in long videos rather than actions in short videos in previous works. 
 
 There are some takeaways from the Vript dataset:
 
@@ -32,14 +32,13 @@ There are some takeaways from the Vript dataset:
 
 4) **High-resolution & Diverse Aspect Ratios & Open Domain**: The Vript dataset contains both long videos from YouTube and short videos from YouTube Shorts and TikTok. The raw videos vary in 720p to 2K resolution.
 
-
 In addition, we propose **Vript-Hard**, a new benchmark consisting of three challenging video understanding tasks **that much harder than the existing video understanding benchmarks.**:
 
-1) **Vript-HAL (Caption)**: A benchmark with very detailed captions rather than short captions. Each caption has ~250 words on average, which is longer than Vript train captions and **25x** longer than the existing video captioning benchmarks. e.g., MSVD, MSR-VTT. Every details in Vript-HAL are carefully checked.
+1) **Vript-HAL (Hallucination Evaluation)**: The first benchmark to comprehensively evaluate object and action hallucinations in video LLMs, providing the detailed ground truth 25x longer than MSR-VTT.
 
-2) **Vript-RR (Retrieve then Reason)**: A video reasoning benchmark by first giving a detailed description of the scene as a hint and then asking questions about details in the scene. 
+2) **Vript-RR (Retrieval then Reasoning)**: A long video reasoning task by giving a hint for locating the relevant scene and then asking questions about the scene. Vript-RR features harder questions that need multi-hop reasoning and longer videos (2min~40min) than previous long video benchmarks, e.g., EgoSchema (3min).
 
-3) **Vript-ERO (Event Re-ordering)**: A benchmark that tests the temporal understanding by offering the descriptions of scenes located in two/four different timelines of the same video, and asks the model to give the right temporal order of the scenes.
+3) **Vript-ERO (Event Re-ordering)**: A benchmark that tests the temporal understanding of long videos by offering the descriptions of scenes located in three different timestamps of the same video, and asks the model to give the right temporal order of the scenes. In Vript-ERO, each video contains over 40 scenes on average.
 
 $\quad$
 
