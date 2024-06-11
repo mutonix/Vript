@@ -13,9 +13,9 @@
 - 🔥 **2024-05-09**: We release **Vriptor-stllm**, a superior video captioning model trained upon [Vript](https://huggingface.co/datasets/Mutonix/Vript/) dataset based on [ST-LLM](https://github.com/TencentARC/ST-LLM/) model. **You can now try this model on the [🤗 Space](https://huggingface.co/spaces/Mutonix/Vriptor-stllm).** We will soon release the model weight.
 
 
-- 🔥 **2024-04-15**: We release the **Vript** dataset and **Vript HardBench** benchmark. Both videos and annotations are **directly** available on [🤗](https://huggingface.co/collections/Mutonix/vript-datasets-661a80dc080a813b6ea95b50). We offer both untrimmed videos and video clips in 720p (higher resolutions may be available later).
+- 🔥 **2024-04-15**: We release the **Vript** dataset and **Vript-Hard** benchmark. Both videos and annotations are **directly** available on [🤗](https://huggingface.co/collections/Mutonix/vript-datasets-661a80dc080a813b6ea95b50). We offer both untrimmed videos and video clips in 720p (higher resolutions may be available later).
 
-- [WIP] We are evaluating various models on the Vript HardBench benchmark and will release the leaderboard soon.
+- [WIP] We are evaluating various models on the Vript-Hard benchmark and will release the leaderboard soon.
 
 - [WIP] We are working on the Vript-CN dataset, which is a Chinese version of the Vript dataset.
 
@@ -33,7 +33,7 @@ There are some takeaways from the Vript dataset:
 4) **High-resolution & Diverse Aspect Ratios & Open Domain**: The Vript dataset contains both long videos from YouTube and short videos from YouTube Shorts and TikTok. The raw videos vary in 720p to 2K resolution.
 
 
-In addition, we propose **Vript HardBench**, a new benchmark consisting of three challenging video understanding tasks **that much harder than the existing video understanding benchmarks.**:
+In addition, we propose **Vript-Hard**, a new benchmark consisting of three challenging video understanding tasks **that much harder than the existing video understanding benchmarks.**:
 
 1) **Vript-HAL (Caption)**: A benchmark with very detailed captions rather than short captions. Each caption has ~250 words on average, which is longer than Vript train captions and **25x** longer than the existing video captioning benchmarks. e.g., MSVD, MSR-VTT. Every details in Vript-HAL are carefully checked.
 
@@ -56,7 +56,7 @@ $\quad$
 
 
 ## Getting Started
-You can download the [Vript dataset](https://huggingface.co/datasets/Mutonix/Vript/) and Vript HardBench validation set ([Vript-HAL](https://huggingface.co/datasets/Mutonix/Vript-HAL/), [Vript-RR](https://huggingface.co/datasets/Mutonix/Vript-RR/), [Vript-ERO](https://huggingface.co/datasets/Mutonix/Vript-ERO/)) on the Huggingface.
+You can download the [Vript dataset](https://huggingface.co/datasets/Mutonix/Vript/) and Vript-Hard validation set ([Vript-HAL](https://huggingface.co/datasets/Mutonix/Vript-HAL/), [Vript-RR](https://huggingface.co/datasets/Mutonix/Vript-RR/), [Vript-ERO](https://huggingface.co/datasets/Mutonix/Vript-ERO/)) on the Huggingface.
 **By downloading these datasets, you agree to the terms of the [License](#License).**
 
 The captions of the videos in the Vript dataset are structured as follows:
@@ -98,7 +98,7 @@ The captions of the videos in the Vript dataset are structured as follows:
 
 More details about the dataset and benchmark can be found in the [DATA.md](DATA.md).
 
-## How to use Vript HardBench
+## How to use Vript-Hard
 
 ### Vript-RR (Retrieve then Reason)
 <p align="center">
@@ -206,7 +206,7 @@ By downloading or using the data or model, you understand, acknowledge, and agre
 
 - ACADEMIC USE ONLY
 
-Any content from Vript/Vript HardBench dataset and Vriptor model is available for academic research purposes only. You agree not to reproduce, duplicate, copy, trade, or exploit for any commercial purposes
+Any content from Vript/Vript-Hard dataset and Vriptor model is available for academic research purposes only. You agree not to reproduce, duplicate, copy, trade, or exploit for any commercial purposes
 
 - NO DISTRIBUTION
 
@@ -218,7 +218,7 @@ In no event shall we be liable for any other damages whatsoever arising out of t
 
 - DISCLAIMER
 
-You are solely responsible for legal liability arising from your improper use of the dataset content. We reserve the right to terminate your access to the dataset at any time. You should delete the Vript/Vript HardBench dataset or Vriptor model if required.
+You are solely responsible for legal liability arising from your improper use of the dataset content. We reserve the right to terminate your access to the dataset at any time. You should delete the Vript/Vript-Hard dataset or Vriptor model if required.
 
 This license is modified from the [HD-VG-100M](https://github.com/daooshee/HD-VG-130M) license.
 
