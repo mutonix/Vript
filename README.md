@@ -7,10 +7,11 @@
 ---
 
 ## Updates
+- 🔥 **2024-06-11**: We release our paper [Vript: A Video Is Worth Thousands of Words](https://arxiv.org/abs/2406.06040). Please check the paper for more details.
+
+
 - 🔥 **2024-05-09**: We release **Vriptor-stllm**, a superior video captioning model trained upon [Vript](https://huggingface.co/datasets/Mutonix/Vript/) dataset based on [ST-LLM](https://github.com/TencentARC/ST-LLM/) model. **You can now try this model on the [🤗 Space](https://huggingface.co/spaces/Mutonix/Vriptor-stllm).** We will soon release the model weight.
 
-
-- **2024-05-06**: We re-annotate the Vript-CAP for a more detaild captioning benchmark. In Vript-CAP, we describe the scene twice as detailed as possible with ~250 words, which is **20x** longer than the existing video captioning benchmarks. e.g., MSVD, MSR-VTT. 
 
 - 🔥 **2024-04-15**: We release the **Vript** dataset and **Vript HardBench** benchmark. Both videos and annotations are **directly** available on [🤗](https://huggingface.co/collections/Mutonix/vript-datasets-661a80dc080a813b6ea95b50). We offer both untrimmed videos and video clips in 720p (higher resolutions may be available later).
 
@@ -34,7 +35,7 @@ There are some takeaways from the Vript dataset:
 
 In addition, we propose **Vript HardBench**, a new benchmark consisting of three challenging video understanding tasks **that much harder than the existing video understanding benchmarks.**:
 
-1) **Vript-CAP (Caption)**: A benchmark with very detailed captions rather than short captions. Each caption has ~250 words on average, which is longer than Vript train captions and **25x** longer than the existing video captioning benchmarks. e.g., MSVD, MSR-VTT. Every details in Vript-CAP are carefully checked.
+1) **Vript-HAL (Caption)**: A benchmark with very detailed captions rather than short captions. Each caption has ~250 words on average, which is longer than Vript train captions and **25x** longer than the existing video captioning benchmarks. e.g., MSVD, MSR-VTT. Every details in Vript-HAL are carefully checked.
 
 2) **Vript-RR (Retrieve then Reason)**: A video reasoning benchmark by first giving a detailed description of the scene as a hint and then asking questions about details in the scene. 
 
@@ -55,7 +56,7 @@ $\quad$
 
 
 ## Getting Started
-You can download the [Vript dataset](https://huggingface.co/datasets/Mutonix/Vript/) and Vript HardBench validation set ([Vript-CAP](https://huggingface.co/datasets/Mutonix/Vript-CAP/), [Vript-RR](https://huggingface.co/datasets/Mutonix/Vript-RR/), [Vript-ERO](https://huggingface.co/datasets/Mutonix/Vript-ERO/)) on the Huggingface.
+You can download the [Vript dataset](https://huggingface.co/datasets/Mutonix/Vript/) and Vript HardBench validation set ([Vript-HAL](https://huggingface.co/datasets/Mutonix/Vript-HAL/), [Vript-RR](https://huggingface.co/datasets/Mutonix/Vript-RR/), [Vript-ERO](https://huggingface.co/datasets/Mutonix/Vript-ERO/)) on the Huggingface.
 **By downloading these datasets, you agree to the terms of the [License](#License).**
 
 The captions of the videos in the Vript dataset are structured as follows:
@@ -222,9 +223,17 @@ You are solely responsible for legal liability arising from your improper use of
 This license is modified from the [HD-VG-100M](https://github.com/daooshee/HD-VG-130M) license.
 
 
-<!-- ## Citation
+## Citation
 ```
-``` -->
+@misc{yang2024vript,
+      title={Vript: A Video Is Worth Thousands of Words}, 
+      author={Dongjie Yang and Suyuan Huang and Chengqiang Lu and Xiaodong Han and Haoxin Zhang and Yan Gao and Yao Hu and Hai Zhao},
+      year={2024},
+      eprint={2406.06040},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
 
 ## Contact
 **Dongjie Yang**: [djyang.tony@sjtu.edu.cn](djyang.tony@sjtu.edu.cn)
