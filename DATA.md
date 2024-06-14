@@ -95,20 +95,20 @@ _Warning: Some zip files may contain empty folders. You can ignore them as these
 
 ### Vript-Bench
 
-#### Vript-CAP
+#### Vript-HAL
 ```
-Vript-CAP/
+Vript-HAL/
 |
-├── CAP_scenes/
+├── HAL_scenes/
 │   ├── -_MRAAhEKio-Scene-010.mp4
 │   └── ...
 │  
-└── CAP_annotations.jsonl
+└── HAL_annotations.jsonl
 ```
 
-- `CAP_scenes.zip`: The trimmed video clips in the Vript-CAP benchmark.
+- `HAL_scenes.zip`: The trimmed video clips in the Vript-HAL benchmark.
 
-- `CAP_annotations.jsonl`: The annotations of the Vript-CAP benchmark. The structure of the annotation file is similar to the `vript_captions` in the Vript dataset. 
+- `HAL_annotations.jsonl`: The annotations of the Vript-HAL benchmark. The structure of the annotation file is similar to the `vript_captions` in the Vript dataset. 
 
 #### Vript-RR
 
