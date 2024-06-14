@@ -1,0 +1,5 @@
+{
+  "system_prompt": "Carefully watch the video and pay attention to the cause and sequence of events, the detail and movement of objects, and the action and pose of persons.",
+  "question_prompt": "<VideoHere> \nDescribe this video in detail.",
+  "answer_prompt": ""
+}

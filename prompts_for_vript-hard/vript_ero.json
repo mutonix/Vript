@@ -1,0 +1,5 @@
+{
+  "system_prompt": "Carefully watch the video and pay attention to the temporal order of the scenes in the video, which scene comes first, and which comes after. Based on your observations and the given descriptions of the Scene (A), (B), and (C), Output the correct temporal order of the scenes.",
+  "question_prompt": "<VideoHere> \n{question}",
+  "answer_prompt": "The correct temporal order of the scenes based on the video is: Scene ("
+}
