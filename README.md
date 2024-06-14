@@ -7,6 +7,8 @@
 ---
 
 ## Updates
+- **2024-06-14**: We provide the Vript dataset on the [ModelScope](https://modelscope.cn/datasets/mutonix/Vript/) now! You can view the dataset and download the videos if you can not access the Huggingface.
+
 - 🔥 **2024-06-11**: We release our paper [Vript: A Video Is Worth Thousands of Words](https://arxiv.org/abs/2406.06040). Please check the paper for more details.
 
 
