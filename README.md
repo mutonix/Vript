@@ -7,9 +7,11 @@
 ---
 
 ## Updates
+- 🔥 **2024-06-15**: We release the **Vript_Chinese** dataset, a Chinese version of the Vript dataset with most detailed Chinese captions. In Vript_Chinese, we annotate the 44.7K Chinese videos (~293K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese/) now.
+
 - **2024-06-14**: 
     + We provide the Vript dataset on the [ModelScope](https://modelscope.cn/datasets/mutonix/Vript/) now! You can view the dataset and download the videos on the ModelScope if you can not access the Huggingface.
-    + We release the prompts for Vript-Hard we use in our paper.
+    + We release the prompts for Vript-Hard we use in our paper for reproducing the Vript-Hard benchmark. You can find the prompts in [here](prompts_for_vript-hard/).
 
 - 🔥 **2024-06-11**: We release our paper [Vript: A Video Is Worth Thousands of Words](https://arxiv.org/abs/2406.06040). Please check the paper for more details.
 
@@ -17,7 +19,7 @@
 - 🔥 **2024-05-09**: We release **Vriptor-stllm**, a superior video captioning model trained upon [Vript](https://huggingface.co/datasets/Mutonix/Vript/) dataset based on [ST-LLM](https://github.com/TencentARC/ST-LLM/) model. **You can now try this model on the [🤗 Space](https://huggingface.co/spaces/Mutonix/Vriptor-stllm).** We will soon release the model weight.
 
 
-- 🔥 **2024-04-15**: We release the **Vript** dataset and **Vript-Hard** benchmark. Both videos and annotations are **directly** available on [🤗](https://huggingface.co/collections/Mutonix/vript-datasets-661a80dc080a813b6ea95b50). We offer both untrimmed videos and video clips in 720p (higher resolutions may be available later).
+- 🔥 **2024-04-15**: We release the **Vript** dataset and **Vript-Hard** benchmark. Both videos and annotations are **directly** available on the [🤗](https://huggingface.co/collections/Mutonix/vript-datasets-661a80dc080a813b6ea95b50). We offer both untrimmed videos and video clips in 720p (higher resolutions may be available later).
 
 - [WIP] We are evaluating various models on the Vript-Hard benchmark and will release the leaderboard soon.
 
