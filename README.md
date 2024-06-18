@@ -7,7 +7,7 @@
 ---
 
 ## Updates
-- 🔥 **2024-06-18**: We give a full pipeline about evaluating your models on Vript-Hard and examples for each task. Please follow the instructions in [here](#how-to-evaluate-on-vript-hard).
+- 🔥 **2024-06-18**: We give a full pipeline about evaluating your models on Vript-Hard and examples for each task. Please follow the instructions [here](#how-to-evaluate-on-vript-hard).
 
 - 🔥 **2024-06-15**: We release the **Vript_Chinese** dataset, a Chinese version of the Vript dataset with most detailed Chinese captions. In Vript_Chinese, we annotate the 44.7K Chinese videos (~293K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese/) now.
 
@@ -103,7 +103,7 @@ The captions of the videos in the Vript dataset are structured as follows:
 More details about the dataset and benchmark can be found in the [DATA.md](DATA.md).
 
 ## How to evaluate on Vript-Hard
-#### Get the prediction of your model
+### Get the prediction of your model
 For fair comparison, please evaluate your own model on the Vript-Hard benchmark using these evaluation prompts in [here](https://github.com/mutonix/Vript/tree/main/vript-hard/evaluation_prompts/).
 
 The output of Vript-Hard is recommended to be in the format used in the [examples](http://github.com/mutonix/Vript/tree/main/vript-hard/evaluation_output_examples/), which is a csv file. The csv file should contain the following columns:
@@ -117,7 +117,7 @@ The output of Vript-Hard is recommended to be in the format used in the [example
 <img src="assets/Vript-RR_01.png" width="800">
 </p> -->
 
-##### PS: Further illustration of evaluating on Vript-RR
+#### PS: Further illustration of evaluating on Vript-RR
 1. **Input of Vript-RR**
 There are two ways to evaluate on the Vript-RR benchmark:
 
@@ -139,7 +139,7 @@ There are two ways to evaluate on the Vript-RR benchmark:
     - Open-ended. (The verification of open-ended questions based on GPT-4 evaluation can be checked in [here](http://github.com/mutonix/Vript/tree/main/vript-hard/scripts/run_verify_RR_openended.sh).)
 
 
-#### Verify the prediction
+### Verify the prediction
 1. First of all, you need to install the requirements:
 ```
 conda create -n vript python=3.8 -y
@@ -166,7 +166,7 @@ bash run_verify_RR_openended.sh
 bash run_verify_ERO.sh
 ```
 
-#### Categories in Vript-RR
+### Categories in Vript-RR
 <p align="center">
 <img src="assets/Vript-RR_00.png" width="500">
 </p>
