@@ -93,7 +93,7 @@ Vript/
 
 _Warning: Some zip files may contain empty folders. You can ignore them as these folders have no video clips and no annotation files._
 
-### Vript-Bench
+### Vript-Hard
 
 #### Vript-HAL
 ```

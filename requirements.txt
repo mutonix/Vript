@@ -1,0 +1,7 @@
+sentence_transformers==2.2.2
+pycocoevalcap==1.2
+spacy==3.5.1
+datasets==2.19.1
+pandas==2.0.0
+openai
+tiktoken

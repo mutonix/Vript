@@ -16,4 +16,6 @@ In no event shall we be liable for any other damages whatsoever arising out of t
 
 You are solely responsible for legal liability arising from your improper use of the dataset content. We reserve the right to terminate your access to the dataset at any time. You should delete the Vript/Vript-Bench dataset or Vriptor model if required.
 
+You must comply with all terms and conditions of these original licenses, including but not limited to the OpenAI Terms of Use, the Copyright Rules & Policies of YouTube or TikTok and the specific licenses for base language models for checkpoints (e.g. Llama-1/2 community license, Vicuna, and ST-LLM). This project does not impose any additional constraints beyond those stipulated in the original licenses.
+
 This license is modified from the [HD-VG-100M](https://github.com/daooshee/HD-VG-130M) license.

@@ -7,11 +7,12 @@
 ---
 
 ## Updates
+- 🔥 **2024-06-18**: We give a full pipeline about evaluating your models on Vript-Hard and examples for each task. Please follow the instructions in [here](#how-to-evaluate-on-vript-hard).
+
 - 🔥 **2024-06-15**: We release the **Vript_Chinese** dataset, a Chinese version of the Vript dataset with most detailed Chinese captions. In Vript_Chinese, we annotate the 44.7K Chinese videos (~293K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese/) now.
 
 - **2024-06-14**: 
     + We provide the Vript dataset on the [ModelScope](https://modelscope.cn/datasets/mutonix/Vript/) now! You can view the dataset and download the videos on the ModelScope if you can not access the Huggingface.
-    + We release the prompts for Vript-Hard we use in our paper for reproducing the Vript-Hard benchmark. You can find the prompts in [here](prompts_for_vript-hard/).
 
 - 🔥 **2024-06-11**: We release our paper [Vript: A Video Is Worth Thousands of Words](https://arxiv.org/abs/2406.06040). Please check the paper for more details.
 
@@ -101,32 +102,69 @@ The captions of the videos in the Vript dataset are structured as follows:
 
 More details about the dataset and benchmark can be found in the [DATA.md](DATA.md).
 
-## How to use Vript-Hard
+## How to evaluate on Vript-Hard
+#### Get the prediction of your model
+For fair comparison, please evaluate your own model on the Vript-Hard benchmark using these evaluation prompts in [here](https://github.com/mutonix/Vript/tree/main/vript-hard/evaluation_prompts/).
 
-### Vript-RR (Retrieve then Reason)
+The output of Vript-Hard is recommended to be in the format used in the [examples](http://github.com/mutonix/Vript/tree/main/vript-hard/evaluation_output_examples/), which is a csv file. The csv file should contain the following columns:
+- `id`: The ID of the video or clip.
+- `pred`: The prediction of the model.
+- `gt`: Optional. If not provided, we will used the ground truth answers automatically downloaded from the Huggingface.
+
+<!-- 
+#### Vript-RR (Retrieve then Reason)
 <p align="center">
 <img src="assets/Vript-RR_01.png" width="800">
-</p>
+</p> -->
 
-#### Input of Vript-RR
+##### PS: Further illustration of evaluating on Vript-RR
+1. **Input of Vript-RR**
 There are two ways to evaluate on the Vript-RR benchmark:
 
-1. `Vript-RR-full` Task: 
-```
-Input: `full video` + `hint` + `question`
-```
-We input the whole video and the hint to the model and ask the question. The model can first locate the scene using the hint and then answer the question, which is more challenging.
+    - `Vript-RR-whole` Task: 
+    ```
+    Input: `whole video` + `question` + `hint`
+    ```
+    We input the whole video along with the question and hint. The model can first locate the scene using the hint and then answer the question, which is more challenging.
 
-2. `Vript-RR-clip` Task:
-```
-Input: `clip` + `hint` + `question`
-```
-We input the related scene instead of the whole video and the hint to the model and ask the question. The model can answer the question based on the related scene, which is more easy.
+    - `Vript-RR-clip` Task:
+    ```
+    Input: `clip` + `question` + `hint`
+    ```
+    We input the related scene instead of the whole video along with the question and hint. The model can answer the question based on the related scene, which is more easy.
 
-#### Output of Vript-RR
-There are also two ways to evaluate the output of the Vript-RR benchmark:
-1. Multiple Choices.
-2. Open-ended. (The evaluation of open-ended questions based on GPT-4 evaluation is still in progress.)
+2. **Output of Vript-RR**
+    There are also two ways to evaluate the output of the Vript-RR benchmark:
+    - Multiple Choices.
+    - Open-ended. (The verification of open-ended questions based on GPT-4 evaluation can be checked in [here](http://github.com/mutonix/Vript/tree/main/vript-hard/scripts/run_verify_RR_openended.sh).)
+
+
+#### Verify the prediction
+1. First of all, you need to install the requirements:
+```
+conda create -n vript python=3.8 -y
+conda activate vript
+pip install -r requirements.txt
+python -m spacy download en_core_web_lg
+```
+2. Then, you can verify the output of your model on the Vript-Hard benchmark using the scripts in [here](http://github.com/mutonix/Vript/tree/main/vript-hard/scripts).
+
+Except for the Vript-RR open-ended verification, you can **directly** run the following commands to have a try (We have provided the examples for an easy start). For RR open-ended verification, you should configure your GPT-4-turbo API key.
+```
+cd vript-hard/scripts
+
+# Verify the output of Vript-HAL
+bash run_verify_HAL.sh
+
+# Verify the output of Vript-RR (Multiple Choices)
+bash run_verify_RR.sh
+
+# Verify the output of Vript-RR (Open-ended)
+bash run_verify_RR_openended.sh 
+
+# Verify the output of Vript-ERO
+bash run_verify_ERO.sh
+```
 
 #### Categories in Vript-RR
 <p align="center">
@@ -222,6 +260,8 @@ In no event shall we be liable for any other damages whatsoever arising out of t
 - DISCLAIMER
 
 You are solely responsible for legal liability arising from your improper use of the dataset content. We reserve the right to terminate your access to the dataset at any time. You should delete the Vript/Vript-Hard dataset or Vriptor model if required.
+
+You must comply with all terms and conditions of these original licenses, including but not limited to the OpenAI Terms of Use, the Copyright Rules & Policies of YouTube or TikTok and the specific licenses for base language models for checkpoints (e.g. Llama-1/2 community license, Vicuna, and ST-LLM). This project does not impose any additional constraints beyond those stipulated in the original licenses.
 
 This license is modified from the [HD-VG-100M](https://github.com/daooshee/HD-VG-130M) license.
 
