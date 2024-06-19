@@ -40,6 +40,7 @@ from argparse import ArgumentParser
 def parse_args():
     parser = ArgumentParser()
     parser.add_argument("--model_path", type=str, help="path to the model checkpoint", default='your_path_to_model/videochat2_7b_stage3.pth')
+    parser.add_argument("--rr_data_path", type=str, help="path to the RR dataset", default='your_path_to_rr_dataset')
     parser.add_argument("--rr_annotation_file", type=str, help="path to the RR annotation file", default='your_path_to_dataset/RR_annotations.jsonl')
     parser.add_argument("--rr_video_path", type=str, help="path to the RR video file", default='your_path_to_dataset/RR_videos')
     parser.add_argument("--rr_clip_path", type=str, help="path to the RR clip file", default='your_path_to_dataset/RR_scenes')

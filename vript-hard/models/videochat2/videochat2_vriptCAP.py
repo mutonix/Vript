@@ -40,8 +40,7 @@ from argparse import ArgumentParser
 def parse_args():
     parser = ArgumentParser()
     parser.add_argument("--model_path", type=str, help="path to the model checkpoint", default='your_path_to_model/videochat2_7b_stage3.pth')
-    parser.add_argument("--cap_annotation_file", type=str, help="path to the CAP annotation file", default='your_path_to_dataset/CAP_annotations.jsonl')
-    parser.add_argument("--cap_video_path", type=str, help="path to the CAP video files", default='your_path_to_dataset/CAP_scenes')
+    parser.add_argument("--cap_data_path", type=str, help="path to the CAP dataset", default='your_path_to_CAP_dataset')
     parser.add_argument("--output_file", type=str, help="path to the output file", default='your_path_to_output/CAP_output.csv')
     args = parser.parse_args()
     return args
@@ -258,8 +257,8 @@ def get_sinusoid_encoding_table(n_position=784, d_hid=1024, cur_frame=8, ckpt_nu
         
     return sinusoid_table
 
-vript_CAP_annotation_file = args.cap_annotation_file
-vript_CAP_video_path = args.cap_video_path
+vript_CAP_annotation_file = os.path.join(args.cap_data_path, 'CAP_annotations.jsonl')
+vript_CAP_video_path = os.path.join(args.cap_data_path, 'CAP_scenes')
 output_file = args.output_file
 
 

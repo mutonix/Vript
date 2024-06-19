@@ -41,8 +41,7 @@ from argparse import ArgumentParser
 def parse_args():
     parser = ArgumentParser()
     parser.add_argument("--model_path", type=str, help="path to the model checkpoint", default='your_path_to_model/videochat2_7b_stage3.pth')
-    parser.add_argument("--ero_annotation_file", type=str, help="path to the ERO annotation file", default='your_path_to_dataset/ERO_annotations.jsonl')
-    parser.add_argument("--ero_video_path", type=str, help="path to the ERO video files", default='your_path_to_dataset/ERO_videos')
+    parser.add_argument("--ero_data_path", type=str, help="path to the ERO dataset", default='your_path_to_ero_dataset')
     parser.add_argument("--output_file", type=str, help="path to the output file", default='your_path_to_output/ERO_output.csv')
     args = parser.parse_args()
     return args
@@ -320,8 +319,8 @@ question_prompt="\nOnly give the correct scene order."
 answer_prompt="The correct temporal order of the scenes based on the video is: Scene ("
 return_prompt='Scene ('
 
-vript_ERO_annotation_file = args.ero_annotation_file
-vript_ERO_video_path = args.ero_video_path
+vript_ERO_annotation_file = os.path.join(args.ero_data_path, 'ERO_annotations.json')
+vript_ERO_video_path = os.path.join(args.ero_data_path, 'ERO_videos')
 output_file = args.output_file
 
 with open(vript_ERO_annotation_file, 'r') as f:
