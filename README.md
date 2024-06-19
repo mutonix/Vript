@@ -11,8 +11,7 @@
 
 - 🔥 **2024-06-15**: We release the **Vript_Chinese** dataset, a Chinese version of the Vript dataset with most detailed Chinese captions. In Vript_Chinese, we annotate the 44.7K Chinese videos (~293K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese/) now.
 
-- **2024-06-14**: 
-    + We provide the Vript dataset on the [ModelScope](https://modelscope.cn/datasets/mutonix/Vript/) now! You can view the dataset and download the videos on the ModelScope if you can not access the Huggingface.
+- **2024-06-14**: We provide the Vript dataset on the [ModelScope](https://modelscope.cn/datasets/mutonix/Vript/) now! You can view the dataset and download the videos on the ModelScope if you can not access the Huggingface.
 
 - 🔥 **2024-06-11**: We release our paper [Vript: A Video Is Worth Thousands of Words](https://arxiv.org/abs/2406.06040). Please check the paper for more details.
 
@@ -54,7 +53,7 @@ $\quad$
 $\quad$
 
 <p align="center">
-<img src="assets/Vript-bench_00.png" width="800">
+<img src="assets/Vript-hard_00.png" width="800">
 </p>
 
 
