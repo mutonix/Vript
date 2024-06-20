@@ -103,12 +103,27 @@ More details about the dataset and benchmark can be found in the [DATA.md](DATA.
 
 ## How to evaluate on Vript-Hard
 ### Get the prediction of your model
+**A quick start of evaluating VideoChat2**
 For fair comparison, please evaluate your own model on the Vript-Hard benchmark using these evaluation prompts in [here](https://github.com/mutonix/Vript/tree/main/vript-hard/evaluation_prompts/).
 
-The output of Vript-Hard is recommended to be in the format used in the [examples](http://github.com/mutonix/Vript/tree/main/vript-hard/evaluation_output_examples/), which is a csv file. The csv file should contain the following columns:
+We provide an example of evaluating the VideoChat2 model on Vript-Hard. First of all, you have to set up the Videochat2 codebase and environment following [the instructions of Videochat2](https://github.com/OpenGVLab/Ask-Anything/tree/main/video_chat2).
+
+Next, copy our [evaluation python files](https://github.com/mutonix/Vript/tree/main/vript-hard/models/videochat2) to the `Ask-Anything/video_chat2` and run the evaluation command. For example, you can evaluate the Videochat2 model on the Vript-RR benchmark using the following commands:
+```
+cd Ask-Anything/video_chat2
+cp /path_to_Vript/Vript/vript-hard/models/videochat2/videochat2_vriptRR.py ./
+
+python videochat2_vriptRR.py \
+    --model_path your_path_to_model/videochat2_7b_stage3.pth \
+    --rr_data_path your_path_to_rr_dataset \
+    --output_filename_video your_path_to_output/RR_video_output.csv \
+    --output_filename_clip your_path_to_output/RR_clip_output.csv
+```
+
+In the above example, we format the prediction of the model as the one in the [output example](http://github.com/mutonix/Vript/tree/main/vript-hard/evaluation_output_examples/), which is a csv file. The csv file should contain the following columns:
 - `id`: The ID of the video or clip.
 - `pred`: The prediction of the model.
-- `gt`: Optional. If not provided, we will used the ground truth answers automatically downloaded from the Huggingface.
+- `gt`: [Optional] The ground truth answers. If they are not provided, we will used the ground truth answers automatically downloaded from the Huggingface.
 
 <!-- 
 #### Vript-RR (Retrieve then Reason)
