@@ -41,9 +41,6 @@ def parse_args():
     parser = ArgumentParser()
     parser.add_argument("--model_path", type=str, help="path to the model checkpoint", default='your_path_to_model/videochat2_7b_stage3.pth')
     parser.add_argument("--rr_data_path", type=str, help="path to the RR dataset", default='your_path_to_rr_dataset')
-    parser.add_argument("--rr_annotation_file", type=str, help="path to the RR annotation file", default='your_path_to_dataset/RR_annotations.jsonl')
-    parser.add_argument("--rr_video_path", type=str, help="path to the RR video file", default='your_path_to_dataset/RR_videos')
-    parser.add_argument("--rr_clip_path", type=str, help="path to the RR clip file", default='your_path_to_dataset/RR_scenes')
     parser.add_argument("--output_filename_video", type=str, help="output filename for video", default='your_path_to_output/RR_open_video_output.csv')  
     parser.add_argument("--output_filename_clip", type=str, help="output filename for clip", default='your_path_to_output/RR_open_clip_output.csv')
     args = parser.parse_args()
@@ -340,9 +337,9 @@ answer_prompt=""
 return_prompt=""
 hint_prompt="\nHint:"
 
-vript_RR_annotation_file = args.rr_annotation_file
-vript_RR_video_path = args.rr_video_path
-vript_RR_video_clip_path = args.rr_clip_path
+vript_RR_annotation_file = os.path.join(args.rr_data_path, 'RR_annotations.jsonl')
+vript_RR_video_path = os.path.join(args.rr_data_path, 'RR_videos')
+vript_RR_video_clip_path = os.path.join(args.rr_data_path, 'RR_scenes')
 output_filename_video = args.output_filename_video
 output_filename_clip = args.output_filename_clip
 
