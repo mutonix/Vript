@@ -1,0 +1,46 @@
+model:
+  arch: st_llm_hf
+  model_type: instructblip_vicuna0
+  use_grad_checkpoint: True
+  max_txt_len: 1024
+  end_sym: "###"
+  prompt_template: '###Human: {} ###Assistant: '
+  llama_model: 'model_weights/stllm_weight'
+  ckpt: 'model_weights/stllm_weight'
+  q_former_model: 'model_weights/instruct_blip_vicuna7b_trimmed.pth'
+  qformer_text_input: True
+  freeze_LLM: False
+  video_input: "residual"
+  residual_size: 16
+  use_mask : False
+  mvm_decode: False
+  max_model_length: 2048
+
+datasets:
+  caption_vript_stage1_single:
+    num_frames: 64
+    video_reader_type: decord_list
+  caption_vript_stage1_concat:
+    num_frames: 64
+    video_reader_type: decord_list 
+
+run:
+  task: video_text_it
+  bf16: True
+  tf32: True
+  output_dir: "./stllm/output/vriptor_stllm_stage1"
+  num_train_epochs: 1
+  dataloader_num_workers: 2
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 8 # 8 GPUs
+  gradient_checkpointing: True
+  evaluation_strategy: "no"
+  learning_rate: 2e-5
+  weight_decay: 0.
+  warmup_ratio: 0.03
+  lr_scheduler_type: 'constant'
+  logging_steps: 1
+  save_strategy: "epoch" 
+  save_total_limit: 1
+  deepspeed: 'stllm/train/opt_offload_zero2_bf16_constant.json'

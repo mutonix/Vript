@@ -7,9 +7,11 @@
 ---
 
 ## Updates
-- 🔥 **2024-06-18**: We give a full pipeline about evaluating your models on Vript-Hard and examples for each task. Please follow the instructions [here](#how-to-evaluate-on-vript-hard).
+[TOP] 🔥🔥🔥 **2024-06-15**: **We release the **[Vript_Chinese](https://huggingface.co/datasets/Mutonix/Vript_Chinese/)** dataset, a Chinese version of the Vript dataset with most detailed Chinese captions.** In Vript_Chinese, we annotate the 44.7K Chinese videos (~293K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese/) now.
 
-- 🔥🔥🔥 **2024-06-15**: **We release the **Vript_Chinese** dataset, a Chinese version of the Vript dataset with most detailed Chinese captions.** In Vript_Chinese, we annotate the 44.7K Chinese videos (~293K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese/) now.
+- 🔥 **2024-06-23**: We open-source the code for training the superior video captioning model, **Vriptor-STLLM**, and [weights](https://huggingface.co/Mutonix/Vriptor-STLLM) for inference. Please check the instructions [here](https://github.com/mutonix/Vript/tree/main/vriptor).
+
+- 🔥 **2024-06-18**: We give a full pipeline about evaluating your models on Vript-Hard and examples for each task. Please follow the instructions [here](#how-to-evaluate-on-vript-hard).
 
 - **2024-06-14**: We provide the Vript dataset on the [ModelScope](https://modelscope.cn/datasets/mutonix/Vript/) now! You can view the dataset and download the videos on the ModelScope if you can not access the Huggingface.
 
