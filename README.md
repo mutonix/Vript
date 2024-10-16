@@ -7,7 +7,20 @@
 ---
 
 ## Updates
-[TOP] 🔥🔥🔥 **2024-06-15**: **We release the **[Vript_Chinese](https://huggingface.co/datasets/Mutonix/Vript_Chinese/)** dataset, a Chinese version of the Vript dataset with most detailed Chinese captions.** In Vript_Chinese, we annotate the 44.7K Chinese videos (~293K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese/) now.
+[TOP] 🔥🔥🔥 **2024-10-16**: **We release the **[Vript_Chinese-V2](https://huggingface.co/datasets/Mutonix/Vript_Chinese-V2/)** dataset, another Chinese version of the Vript dataset with most detailed Chinese captions.** In Vript_Chinese-V2, we annotate the 19.1K Chinese videos (~667K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese-V2/) now.
+
+**New in V2**: 
+1. More diverse and fine-grained categories: 113 categories (please check [vript_CN-V2_meta.json](https://huggingface.co/datasets/Mutonix/Vript_Chinese-V2/blob/main/vript_CN-V2_meta.jsonl)).
+2. Wider range: from 2011-01 to 2024-06
+3. Higher resolution: 1080p
+4. Longer duration: > 10 minutes in average
+5. More clips: ~677k clips
+
+
+- 🎉🎉🎉 **2024-09-28**： Our paper our paper [Vript: A Video Is Worth Thousands of Words](https://arxiv.org/abs/2406.06040) is accepted as poster in Neurips 2024 in Dataset & Benchmark track.
+
+
+- 🔥 **2024-06-15**: **We release the **[Vript_Chinese](https://huggingface.co/datasets/Mutonix/Vript_Chinese/)** dataset, a Chinese version of the Vript dataset with most detailed Chinese captions.** In Vript_Chinese, we annotate the 44.7K Chinese videos (~293K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese/) now.
 
 - 🔥 **2024-06-23**: We open-source the code for training the superior video captioning model, **Vriptor-STLLM**, and [weights](https://huggingface.co/Mutonix/Vriptor-STLLM) for inference. Please check the instructions [here](https://github.com/mutonix/Vript/tree/main/vriptor).
 
