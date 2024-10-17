@@ -17,8 +17,10 @@
 5. Longer duration: > 10 minutes in average
 6. More clips: ~677k clips
 
+---
 
-- 🎉🎉🎉 **2024-09-28**： Our paper our paper [Vript: A Video Is Worth Thousands of Words](https://arxiv.org/abs/2406.06040) is accepted as poster in Neurips 2024 in Dataset & Benchmark track.
+
+- 🎉🎉🎉 **2024-09-28**： Our paper [Vript: A Video Is Worth Thousands of Words](https://arxiv.org/abs/2406.06040) is accepted as poster in Neurips 2024 in Dataset & Benchmark track.
 
 
 - 🔥 **2024-06-15**: **We release the **[Vript_Chinese](https://huggingface.co/datasets/Mutonix/Vript_Chinese/)** dataset, a Chinese version of the Vript dataset with most detailed Chinese captions.** In Vript_Chinese, we annotate the 44.7K Chinese videos (~293K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese/) now.
