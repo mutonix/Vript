@@ -7,20 +7,20 @@
 ---
 
 ## Updates
-[TOP] 🔥🔥🔥 **2024-10-16**: **We release the **[Vript_Multilingual](https://huggingface.co/datasets/Mutonix/Vript_Multilingual/)** dataset.** In Vript_Multilingual, we annotate the 19.1K UGC videos (~667K clips) with multiple languages. Each caption contains over 150 words. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Multilingual/) now.
+[TOP] 🔥🔥🔥 **2024-10-16**: **We release the **[Vript_Multilingual](https://huggingface.co/datasets/Mutonix/Vript_Multilingual/)** dataset.** In Vript_Multilingual, we annotate 19.1K Chinese UGC videos (~667K clips) with multiple languages. Each caption contains over 150 words. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Multilingual/) now.
 
 **New in Vript_Multilingual**: 
 1. Multilingual captions: zh (60%), en (17%), de (15%), ja (6%), ko (2%), ru (<1%), es (<1%), pt (<1%), jv (<1%), fr (<1%), id (<1%), vi (<1%)
 2. More diverse and fine-grained categories: 113 categories (please check `tname` in [vript_CN-V2_meta.json](https://huggingface.co/datasets/Mutonix/Vript_Multilingual/blob/main/vript_CN-V2_meta.jsonl))
 3. Wider range: from 2011-01 to 2024-06
 4. Higher resolution: 1080p
-5. Longer duration: > 10 minutes in average
+5. Longer duration: > 10 minutes in average per video
 6. More clips: ~677k clips
 
 ---
 
 
-- 🎉🎉🎉 **2024-09-28**： Our paper [Vript: A Video Is Worth Thousands of Words](https://arxiv.org/abs/2406.06040) is accepted as poster in Neurips 2024 in Dataset & Benchmark track.
+- 🎉🎉🎉 **2024-09-28**： Our paper [Vript: A Video Is Worth Thousands of Words](https://arxiv.org/abs/2406.06040) is accepted as a poster in Neurips 2024 in Dataset & Benchmark track.
 
 
 - 🔥 **2024-06-15**: **We release the **[Vript_Chinese](https://huggingface.co/datasets/Mutonix/Vript_Chinese/)** dataset, a Chinese version of the Vript dataset with most detailed Chinese captions.** In Vript_Chinese, we annotate the 44.7K Chinese videos (~293K clips) with Chinese directly. Each caption contains over 200 Chinese characters. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Chinese/) now.
