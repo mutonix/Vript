@@ -9,6 +9,8 @@
 ## Updates
 [TOP] 🔥🔥🔥 **2024-10-16**: **We release the **[Vript_Multilingual](https://huggingface.co/datasets/Mutonix/Vript_Multilingual/)** dataset.** In Vript_Multilingual, we annotate 19.1K Chinese UGC videos (~667K clips) with multiple languages. Each caption contains over 150 words. You can explore and download the dataset on the [🤗](https://huggingface.co/datasets/Mutonix/Vript_Multilingual/) now.
 
+⚠️ The videos in `Vript`, `Vript_CN`, and `Vript_Multiligual` come from different [sources](https://github.com/mutonix/Vript/issues/9) and have no overlap.
+
 **New in Vript_Multilingual**: 
 1. Multilingual captions: zh (60%), en (17%), de (15%), ja (6%), ko (2%), ru (<1%), es (<1%), pt (<1%), jv (<1%), fr (<1%), id (<1%), vi (<1%)
 2. More diverse and fine-grained categories: 113 categories (please check `tname` in [vript_CN-V2_meta.json](https://huggingface.co/datasets/Mutonix/Vript_Multilingual/blob/main/vript_CN-V2_meta.jsonl))
